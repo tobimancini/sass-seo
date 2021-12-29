@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Ubuntu:wght@300;400&display=swap');
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+li, a{
+	text-decoration: none;
+	color: #c5a25b;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+	width: 100%;
+	min-height: 100vh;
+	max-height: 3000px;
+	background-image: linear-gradient(rgba(0,0,0,0.3),transparent), url(../imagenes/wallp.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	padding: 0 10%;
+
+	@media all and (max-width: 768px){
+		min-height: 1200px;
+	}
+
+	.header{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 10%;
+
+		.logo{
+			width: 100px;
+			cursor: pointer;
+		}
+		.navList{
+			flex: 1;
+			list-style: none;
+			text-align: right;
+			padding-right: 30px;
+
+			li{
+				display: inline-block;
+				margin: 0 20px;
+
+				a{
+					font-family: 'Ubuntu', serif;
+					font-weight: 400;
+					color: #c5a25b;
+					font-size: 25px;
+					position: relative;
+					&.active{
+						font-size: 30px;
+						color: #fff ;
+						@media all and (max-width: 768px){
+						font-size:25px;
+						}
+					}
+					@media all and (max-width: 768px){
+						font-size: 20px;
+					}
+					&::after{
+						content: "";
+						width: 0;
+						height: 3px;
+						position: absolute;
+						bottom: -5px;
+						left: 50%;
+						transform: translateX(-50%);
+						background: #c5a25b;
+						transition: width 0.3s ;		
+					}
+
+				}
+			}
+		}		
+	}
+	.portada{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		color: #c5a25b;
+		position: relative;
+		bottom: 8%;
+		justify-content:space-around;
+
+		.titulos{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			width: 70%;
+		}
+
+		.tituloInicio{
+			width: 100%;
+			color: #c5a25b;
+			font-size: 55px;
+			font-weight: 700;
+			font-family: 'Audiowide', cursive;
+
+			@media all and (max-width: 768px){
+			font-size: 30px;
+			}
+		}
+
+		.tituloFinal{
+			width: 100%;
+			font-size: 190px;
+			line-height: 160px;
+			margin-left: -10px;
+			font-weight: 700;
+			font-family: 'Audiowide', cursive;
+			margin-bottom: 10px;
+			color: transparent;
+			-webkit-text-stroke: 1px #c5a25b ;
+			background: url(../imagenes/doradoplateado.jpg);
+			-webkit-background-clip: text;
+			background-position: 0 0;
+			animation: back 15s linear infinite;
+
+			@media all and (max-width: 768px){
+				font-size: 120px;
+			}
+
+		}
+
+		.textoPortada{
+			font-size: 25px;
+			font-weight: 400;
+			color: white;
+			font-family: 'Ubuntu', serif;
+			font-weight: 400;
+			width: 100%;
+
+			@media all and (max-width: 768px){
+				font-size: 18px;
+			}
+
+		}
+
+		.imagenCopa{
+			display: flex;
+			justify-content: center;
+			width: 30%;
+
+			img{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				height: auto;
+			}
+		}
+
+		img{
+			width:150px;
+		}
+
+	}
+	.descTorneo{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		height: 500px;
+		width: 50%;
+
+			@media all and (max-width: 768px){
+				heigh: 1000px;
+				width: 100%;
+			}
+
+		.textoTorneo{
+			font-size: 25px;
+			color: #c5a25b;
+			font-family: 'Ubuntu', serif;
+			margin: 5px;
+
+			@media all and (max-width: 768px){
+				font-size: 20px;
+			}
+
+		}
+
+		.video{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+
+			@media all and (max-width: 768px){
+				heigh: 200px;
+			}
+
+			iframe{
+				border: solid 5px;
+				border-radius: 15px;
+				border-color:#c5a25b;
+				transition: 0.3s ease-in-out;
+
+				@media all and (max-width: 768px){
+					height: 200px;
+					width: 400px;
+				}
+
+				&:hover{
+					transform: scale(1.1);
+				}
+			}
+		}
+
+	}
+}
+
+.container .header .navList li a:hover::after{
+	width: 50%;
+}
+
+@keyframes back {
+			100%{
+				background-position: 2000px 0;
+			}
+		}
+
+.footer{
+	display: flex;
+	flex-wrap: wrap;
+	bottom: 0;
+	width: 100%;
+	background-color: #c5a25b;
+	height: 90px;
+
+	ul{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		list-style-type: none;
+		position: relative;
+		text-decoration: none;
+		padding: 15px;
+		width: 100%;
+
+		li{
+			display: inline-block;
+
+			img{
+				width: 70px;
+				transition: all 0.3s ease-in-out;
+
+				&:hover{
+					animation-name: spin;
+					animation-duration: 0.3s;
+					animation-iteration-count: 1;
+					animation-timing-function: linear;
+					animation-delay: 0.1s;
+				}
+			}
+		}
+	}
+}
+
+@keyframes spin{
+	from{
+		transform: rotatey(0deg);
+	}
+	to{
+		transform:rotatey(360deg);
+	}
+	
+}
