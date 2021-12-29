@@ -40,22 +40,21 @@ li, a {
       .container .header .navList li {
         display: inline-block;
         margin: 0 20px; }
-        .container .header .navList li a {
+        .container .header .navList li .section, .container .header .navList li .section.sectionActive {
           font-family: 'Ubuntu', serif;
           font-weight: 400;
           color: #c5a25b;
           font-size: 25px;
           position: relative; }
-          .container .header .navList li a.active {
-            font-size: 30px;
+          .container .header .navList li .sectionActive.section {
             color: #fff; }
             @media all and (max-width: 768px) {
-              .container .header .navList li a.active {
+              .container .header .navList li .sectionActive.section {
                 font-size: 25px; } }
           @media all and (max-width: 768px) {
-            .container .header .navList li a {
+            .container .header .navList li .section, .container .header .navList li .section.sectionActive {
               font-size: 20px; } }
-          .container .header .navList li a::after {
+          .container .header .navList li .section::after, .container .header .navList li .section.sectionActive::after {
             content: "";
             width: 0;
             height: 3px;
@@ -129,8 +128,8 @@ li, a {
       width: 150px; }
   .container .descTorneo {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     height: 500px;
