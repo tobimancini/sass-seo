@@ -140,9 +140,9 @@ li, a {
         width: 100%; } }
     .container .descTorneo .textoTorneo {
       font-size: 25px;
-      color: #c5a25b;
-      font-family: 'Ubuntu', serif;
-      margin: 5px; }
+      color: #fff;
+      margin: 5px;
+      font-family: 'Ubuntu', serif; }
       @media all and (max-width: 768px) {
         .container .descTorneo .textoTorneo {
           font-size: 20px; } }

@@ -2,6 +2,7 @@
 @import "variables";
 @import "tools";
 
+
 *{
 	margin:0;
 	padding:0;
@@ -177,10 +178,10 @@ li, a{
 			}
 
 		.textoTorneo{
-			font-size: 25px;
-			color: $dorado;
+			font-size: map-get($text,tamaño);
+			color: map-get($text,color);
+			margin: map-get($text,margin);
 			font-family: 'Ubuntu', serif;
-			margin: 5px;
 
 			@media all and (max-width: 768px){
 				font-size: 20px;
