@@ -171,6 +171,7 @@ li, a{
 	.flexContainer{
 		@include flexRow;
 		align-items: center;
+		justify-content: space-around;
 		padding: 100px 0 0 0;
 		@media all and (max-width: 768px){
 			@include flexColumn;
@@ -228,6 +229,8 @@ li, a{
 				border-radius: 15px;
 				border-color: $dorado;
 				transition: 0.3s ease-in-out;
+				height: 400px;
+				width: 500px;
 
 				@media all and (max-width: 768px){
 					height: 350px;

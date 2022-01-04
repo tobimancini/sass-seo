@@ -134,6 +134,7 @@ li, a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     padding: 100px 0 0 0; }
     @media all and (max-width: 768px) {
       .container .flexContainer {
@@ -178,7 +179,9 @@ li, a {
         border: solid 5px;
         border-radius: 15px;
         border-color: #c5a25b;
-        transition: 0.3s ease-in-out; }
+        transition: 0.3s ease-in-out;
+        height: 400px;
+        width: 500px; }
         @media all and (max-width: 768px) {
           .container .flexContainer .video iframe {
             height: 350px;
