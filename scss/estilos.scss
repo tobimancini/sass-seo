@@ -14,9 +14,8 @@ li, a{
 	color: $dorado;
 }
 
-.container{
+.container {
 	@include flexColumn;
-	justify-content:space-around;
 	width: 100%;
 	min-height: 100vh;
 	max-height: 3000px;
@@ -27,7 +26,7 @@ li, a{
 	padding: 0 10%;
 
 	@media all and (max-width: 768px){
-		min-height: 1200px;
+		min-height: 750px;
 	}
 
 	.header{
@@ -46,6 +45,10 @@ li, a{
 			list-style: none;
 			text-align: right;
 			padding-right: 30px;
+
+			@media all and (max-width:768px){
+				@include flexColumn;
+			}
 
 			li{
 				display: inline-block;
@@ -87,7 +90,7 @@ li, a{
 		@include flexRow;
 		flex-wrap: wrap;
 		color: $dorado;
-		position: relative;
+		position: absolute;
 		bottom: 8%;
 		justify-content:space-around;
 
@@ -95,7 +98,7 @@ li, a{
 			@include flexColumn;
 			align-items: flex-start;
 			justify-content: center;
-			width: 70%;
+			width: 80%;
 		}
 
 		.tituloInicio{
@@ -126,7 +129,7 @@ li, a{
 			animation: back 15s linear infinite;
 
 			@media all and (max-width: 768px){
-				font-size: 120px;
+				font-size: 105px;
 			}
 
 		}
@@ -148,44 +151,69 @@ li, a{
 		.imagenCopa{
 			display: flex;
 			justify-content: center;
-			width: 30%;
+			width: auto;
 
 			img{
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				position: relative;
-				height: auto;
-			}
-		}
+				width: 115px;
 
-		img{
-			width:150px;
+				@media all and (max-width: 768px){
+					width: 94px
+					
+				}
+			}
 		}
 
 	}
-	.descTorneo{
-		@include flexColumn;
-		flex-wrap: wrap;
+	.flexContainer{
+		@include flexRow;
 		align-items: center;
-		justify-content: space-evenly;
-		height: 500px;
-		width: 50%;
+		padding: 100px 0 0 0;
+		@media all and (max-width: 768px){
+			@include flexColumn;
+		}
+
+		.descTorneo {
+			@include flexColumn;
+			align-items: center;
+			justify-content: space-evenly;
+			height: 500px;
+			width: 50%;
 
 			@media all and (max-width: 768px){
-				heigh: 1000px;
+				width:100%;
+				justify-content: flex-start;
+				padding: 30px;
+				heigh: 350px;
+
+			}
+
+			.tituloPrincipal{
 				width: 100%;
-			}
+				color: $dorado;
+				font-size: 55px;
+				font-weight: 700;
+				font-family: 'Audiowide', cursive;
 
-		.textoTorneo{
-			font-size: map-get($text,tamaño);
-			color: map-get($text,color);
-			margin: map-get($text,margin);
-			font-family: 'Ubuntu', serif;
+				@media all and (max-width: 768px){
+				font-size: 30px;
+				}
+				}	
 
-			@media all and (max-width: 768px){
-				font-size: 20px;
-			}
+			.textoTorneo{
+				font-size: map-get($text,tamaño);
+				color: map-get($text,color);
+				margin: map-get($text,margin);
+				font-family: 'Ubuntu', serif;
+
+				@media all and (max-width: 768px){
+					font-size: 20px;
+				}
+
+			}	
 
 		}
 
@@ -193,20 +221,16 @@ li, a{
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			height: 100%;
-
-			@media all and (max-width: 768px){
-				heigh: 200px;
-			}
+			height: 400px;
 
 			iframe{
 				border: solid 5px;
 				border-radius: 15px;
-				border-color:$dorado;
+				border-color: $dorado;
 				transition: 0.3s ease-in-out;
 
 				@media all and (max-width: 768px){
-					height: 200px;
+					height: 350px;
 					width: 400px;
 				}
 
@@ -216,7 +240,8 @@ li, a{
 			}
 		}
 
-	}
+		
+	}	
 }
 
 .container .header .navList li a:hover::after{

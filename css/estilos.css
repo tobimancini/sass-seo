@@ -11,7 +11,6 @@ li, a {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   width: 100%;
   min-height: 100vh;
   max-height: 3000px;
@@ -22,7 +21,7 @@ li, a {
   padding: 0 10%; }
   @media all and (max-width: 768px) {
     .container {
-      min-height: 1200px; } }
+      min-height: 750px; } }
   .container .header {
     display: flex;
     flex-wrap: wrap;
@@ -37,6 +36,10 @@ li, a {
       list-style: none;
       text-align: right;
       padding-right: 30px; }
+      @media all and (max-width: 768px) {
+        .container .header .navList {
+          display: flex;
+          flex-direction: column; } }
       .container .header .navList li {
         display: inline-block;
         margin: 0 20px; }
@@ -69,7 +72,7 @@ li, a {
     flex-direction: row;
     flex-wrap: wrap;
     color: #c5a25b;
-    position: relative;
+    position: absolute;
     bottom: 8%;
     justify-content: space-around; }
     .container .portada .titulos {
@@ -77,7 +80,7 @@ li, a {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      width: 70%; }
+      width: 80%; }
     .container .portada .tituloInicio {
       width: 100%;
       color: #c5a25b;
@@ -103,7 +106,7 @@ li, a {
       animation: back 15s linear infinite; }
       @media all and (max-width: 768px) {
         .container .portada .tituloFinal {
-          font-size: 120px; } }
+          font-size: 105px; } }
     .container .portada .textoPortada {
       font-size: 25px;
       font-weight: 400;
@@ -117,53 +120,70 @@ li, a {
     .container .portada .imagenCopa {
       display: flex;
       justify-content: center;
-      width: 30%; }
+      width: auto; }
       .container .portada .imagenCopa img {
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        height: auto; }
-    .container .portada img {
-      width: 150px; }
-  .container .descTorneo {
+        width: 115px; }
+        @media all and (max-width: 768px) {
+          .container .portada .imagenCopa img {
+            width: 94px; } }
+  .container .flexContainer {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    height: 500px;
-    width: 50%; }
+    padding: 100px 0 0 0; }
     @media all and (max-width: 768px) {
-      .container .descTorneo {
-        heigh: 1000px;
-        width: 100%; } }
-    .container .descTorneo .textoTorneo {
-      font-size: 25px;
-      color: #fff;
-      margin: 5px;
-      font-family: 'Ubuntu', serif; }
+      .container .flexContainer {
+        display: flex;
+        flex-direction: column; } }
+    .container .flexContainer .descTorneo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 500px;
+      width: 50%; }
       @media all and (max-width: 768px) {
-        .container .descTorneo .textoTorneo {
-          font-size: 20px; } }
-    .container .descTorneo .video {
+        .container .flexContainer .descTorneo {
+          width: 100%;
+          justify-content: flex-start;
+          padding: 30px;
+          heigh: 350px; } }
+      .container .flexContainer .descTorneo .tituloPrincipal {
+        width: 100%;
+        color: #c5a25b;
+        font-size: 55px;
+        font-weight: 700;
+        font-family: 'Audiowide', cursive; }
+        @media all and (max-width: 768px) {
+          .container .flexContainer .descTorneo .tituloPrincipal {
+            font-size: 30px; } }
+      .container .flexContainer .descTorneo .textoTorneo {
+        font-size: 25px;
+        color: #fff;
+        margin: 5px;
+        font-family: 'Ubuntu', serif; }
+        @media all and (max-width: 768px) {
+          .container .flexContainer .descTorneo .textoTorneo {
+            font-size: 20px; } }
+    .container .flexContainer .video {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100%; }
-      @media all and (max-width: 768px) {
-        .container .descTorneo .video {
-          heigh: 200px; } }
-      .container .descTorneo .video iframe {
+      height: 400px; }
+      .container .flexContainer .video iframe {
         border: solid 5px;
         border-radius: 15px;
         border-color: #c5a25b;
         transition: 0.3s ease-in-out; }
         @media all and (max-width: 768px) {
-          .container .descTorneo .video iframe {
-            height: 200px;
+          .container .flexContainer .video iframe {
+            height: 350px;
             width: 400px; } }
-        .container .descTorneo .video iframe:hover {
+        .container .flexContainer .video iframe:hover {
           transform: scale(1.1); }
 
 .container .header .navList li a:hover::after {
